@@ -14,15 +14,8 @@ namespace BibliotecaMusica.DAO
         {
             DataTable dt = new DataTable();
             BD bd = Conexion.BD.getInstance();
-            // dt= bd.sqlSelect("select * from clientes");
-            String sql = "select * from disco where 1=1";
-            //if (id.Trim() != "") sql += String.Format(" and id like '%{0}'", id);
+            String sql = "Select * from disco where 1=1";
             if (nombre.Trim() != "") sql += String.Format(" and nombre like '%{0}%'", nombre);
-            //if (apePaterno.Trim() != "") sql += String.Format(" and apePaterno like '%{0}'", apePaterno);
-            //if (apeMaterno.Trim() != "") sql += String.Format(" and apeMaterno like '%{0}'", apeMaterno);
-            //if (direccion.Trim() != "") sql += String.Format(" and direccion like '%{0}'", direccion);
-            //if (sexo != ' ') sql += String.Format(" and sexo like '%{0}'", sexo);
-            //if (apeMaterno.Trim() != "") sql += String.Format(" and apeMaterno like '%{0}'", apeMaterno);
             dt = bd.sqlSelect(cuantos, sql);
             return dt;
         }
@@ -30,7 +23,7 @@ namespace BibliotecaMusica.DAO
 
         public static Disco sqlLeer(Disco disco)
         {
-            String sql = "select * from disco where id = '" + disco.Id + "'";
+            String sql = "Select * from disco where id = '" + disco.Id + "'";
              BD bd = Conexion.BD.getInstance();
              bd.sqlEjecutar(sql);
              return disco;
@@ -38,7 +31,7 @@ namespace BibliotecaMusica.DAO
 
         public static Boolean sqlInsert(Disco disco)
         {
-            String sql = "insert into disco (id, nombre) values ('" + disco.Id + "','" + disco.Nombre + "')";
+            String sql = "Insert into disco (id, nombre, idArtista) values ('" + disco.Id + "','" + disco.Nombre + "', '" + disco.IdArtista + "')";
             BD bd = Conexion.BD.getInstance();
             bd.sqlEjecutar(sql);
             return true;
@@ -54,7 +47,7 @@ namespace BibliotecaMusica.DAO
         }
         public static Boolean sqlUpdate(Disco disco)
         {
-            string sql = "update disco set nombre '" + disco.Nombre + "' where id = '" + disco.Id + "'";
+            string sql = "Update disco set nombre '" + disco.Nombre + "', idArtista = '" + disco.IdArtista + "' where id = '" + disco.Id + "'";
             BD bd = Conexion.BD.getInstance();
             bd.sqlEjecutar(sql);
             return true;
