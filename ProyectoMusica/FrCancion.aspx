@@ -37,6 +37,7 @@
                     <Columns>
                         <asp:BoundField DataField="id" HeaderText="Id" />
                         <asp:BoundField DataField="nombre" HeaderText="Disco" />
+                        
                     </Columns>
                 </asp:GridView>
             </td>
