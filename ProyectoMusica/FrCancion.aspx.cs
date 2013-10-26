@@ -17,4 +17,8 @@ public partial class FrCancion : System.Web.UI.Page
     {
 
     }
+    protected void btAtras_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("FrCancion.aspx");
+    }
 }

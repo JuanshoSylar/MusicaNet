@@ -50,7 +50,8 @@
             <td>
                 &nbsp;</td>
             <td>
-                <asp:Button ID="btAtras" runat="server" Text="&lt;--- Atras " />
+                <asp:Button ID="btAtras" runat="server" onclick="btAtras_Click" 
+                    Text="&lt;--- Atras " />
             </td>
             <td>
                 &nbsp;</td>
