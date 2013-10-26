@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using BibliotecaMusica.Conexion;
 using BibliotecaMusica.Entity;
 
@@ -19,17 +20,17 @@ namespace BibliotecaMusica.DAO
             return dt;
         }
 
-        public static Genero sqlLeer(Artista artista)
+        public static Artista sqlLeer(Artista artista)
         {
-            String sql = "Select * from artista where id = '" + genero.Id + "'";
+            String sql = "Select * from artista where id = '" + artista.Id + "'";
             BD bd = Conexion.BD.getInstance();
             bd.sqlEjecutar(sql);
-            return disco;
+            return artista;
         }
 
         public static Boolean sqlInsert(Artista artista)
         {
-            String sql = "Insert into artista (id, nombre) values ('" + disco.Id + "','" + disco.Nombre + "')";
+            String sql = "Insert into artista (id, nombre) values ('" + artista.Id + "','" + artista.Nombre + "')";
             BD bd = Conexion.BD.getInstance();
             bd.sqlEjecutar(sql);
             return true;
@@ -37,7 +38,7 @@ namespace BibliotecaMusica.DAO
 
         public static Boolean sqlDelete(Artista artista)
         {
-            String sql = "Delete from artista where id = '" + disco.Id + "'";
+            String sql = "Delete from artista where id = '" + artista.Id + "'";
             BD bd = Conexion.BD.getInstance();
             bd.sqlEjecutar(sql);
             return true;
@@ -46,7 +47,7 @@ namespace BibliotecaMusica.DAO
 
         public static Boolean sqlUpdate(Artista artista)
         {
-            string sql = "Update artista set nombre '" + disco.Nombre + "' where id = '" + disco.Id + "'";
+            string sql = "Update artista set nombre '" + artista.Nombre + "' where id = '" + artista.Id + "'";
             BD bd = Conexion.BD.getInstance();
             bd.sqlEjecutar(sql);
             return true;
