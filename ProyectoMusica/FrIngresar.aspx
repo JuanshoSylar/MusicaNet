@@ -57,7 +57,8 @@
                             <td>
                                 &nbsp;</td>
                             <td colspan="2">
-                                <asp:Button ID="btIngresar" runat="server" Text="Ingresar" />
+                                <asp:Button ID="btIngresar" runat="server" Text="Ingresar" 
+                                    onclick="btIngresar_Click" />
                             </td>
                             <td>
                                 &nbsp;</td>

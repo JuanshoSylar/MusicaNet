@@ -21,4 +21,8 @@ public partial class FrIngresar : System.Web.UI.Page
     {
         Response.Redirect("FrPrincipal.aspx");
     }
+    protected void btIngresar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("FrBuscador.aspx");
+    }
 }
