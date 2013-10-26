@@ -14,7 +14,8 @@
                 <asp:TextBox ID="txNombre" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:Button ID="btBuscar" runat="server" Text="Buscar" />
+                <asp:Button ID="btBuscar" runat="server" onclick="btBuscar_Click" 
+                    Text="Buscar" />
             </td>
             <td>
                 <asp:Button ID="btCerrar" runat="server" Text="Cerrar" />
@@ -34,7 +35,8 @@
             <td>
                 &nbsp;</td>
             <td>
-                <asp:GridView ID="grDisco" runat="server" AutoGenerateColumns="False">
+                <asp:GridView ID="grDisco" runat="server" AutoGenerateColumns="False" 
+                    onselectedindexchanged="grDisco_SelectedIndexChanged">
                     <Columns>
                         <asp:BoundField DataField="id" HeaderText="ID" />
                         <asp:BoundField DataField="nombre" HeaderText="Nombre" />

@@ -13,12 +13,29 @@ using System.Xml.Linq;
 
 public partial class FrDisco : System.Web.UI.Page
 {
+    DataTable dt;
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        leer();
     }
     protected void btAtras_Click(object sender, EventArgs e)
     {
         Response.Redirect("FrBuscador.aspx");
+    }
+    protected void grDisco_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        DataRow row = dt.Rows[grDisco.SelectedIndex];
+        Session["id"] = row["id"].ToString();
+    }
+
+    public void leer()
+    {
+        dt = BibliotecaMusica.DAO.DAODisco.sqlLeerTodas(txNombre.Text);
+        grDisco.DataSource = dt;
+        grDisco.DataBind();
+    }
+    protected void btBuscar_Click(object sender, EventArgs e)
+    {
+        leer();
     }
 }
