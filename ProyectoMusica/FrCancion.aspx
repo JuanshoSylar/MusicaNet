@@ -34,7 +34,7 @@
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
                     <Columns>
                         <asp:BoundField DataField="id" HeaderText="Id" />
-                        <asp:BoundField DataField="nombre" HeaderText="Nombre de la cancion" />
+                        <asp:BoundField DataField="disco" HeaderText="Disco" />
                         <asp:BoundField DataField="idArtista" HeaderText="Artista" />
                     </Columns>
                 </asp:GridView>
@@ -50,7 +50,8 @@
             <td>
                 &nbsp;</td>
             <td>
-                &nbsp;</td>
+                <asp:Button ID="btAtras" runat="server" Text="&lt;--- Atras " />
+            </td>
             <td>
                 &nbsp;</td>
             <td>
