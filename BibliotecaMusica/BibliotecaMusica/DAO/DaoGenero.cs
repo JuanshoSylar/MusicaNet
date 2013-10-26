@@ -19,7 +19,6 @@ namespace BibliotecaMusica.DAO
             return dt;
         }
 
-
         public static Genero sqlLeer(Genero genero)
         {
             String sql = "Select * from genero where id = '" + genero.Id + "'";
@@ -44,6 +43,7 @@ namespace BibliotecaMusica.DAO
             return true;
 
         }
+
         public static Boolean sqlUpdate(Genero genero)
         {
             string sql = "Update genero set nombre '" + disco.Nombre + "', idArtista = '" + disco.IdArtista + "' where id = '" + disco.Id + "'";

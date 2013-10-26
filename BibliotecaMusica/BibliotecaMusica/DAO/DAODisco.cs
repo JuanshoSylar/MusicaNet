@@ -20,7 +20,6 @@ namespace BibliotecaMusica.DAO
             return dt;
         }
 
-
         public static Disco sqlLeer(Disco disco)
         {
             String sql = "Select * from disco where id = '" + disco.Id + "'";
@@ -45,6 +44,7 @@ namespace BibliotecaMusica.DAO
             return true;
 
         }
+
         public static Boolean sqlUpdate(Disco disco)
         {
             string sql = "Update disco set nombre '" + disco.Nombre + "', idArtista = '" + disco.IdArtista + "' where id = '" + disco.Id + "'";

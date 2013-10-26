@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\BD.cs" />
+    <Compile Include="DAO\DAOArtista.cs" />
     <Compile Include="DAO\DAOCancion.cs" />
     <Compile Include="DAO\DAODisco.cs" />
     <Compile Include="DAO\DaoGenero.cs" />
