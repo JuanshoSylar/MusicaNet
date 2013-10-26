@@ -28,8 +28,8 @@
                         Text="Crear Cuenta" Width="200px" />
                 </td>
                 <td>
-                    <asp:Button ID="btIngresar" runat="server" Height="100px" Text="Ingresar" 
-                        Width="200px" />
+                    <asp:Button ID="btIngresar" runat="server" Height="100px" 
+                        onclick="btIngresar_Click" Text="Ingresar" Width="200px" />
                 </td>
             </tr>
         </table>
