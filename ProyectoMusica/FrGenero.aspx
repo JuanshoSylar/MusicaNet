@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
-</asp:Content>
+
 <asp:Content ID="Content4" ContentPlaceHolderID="cphContenido" Runat="Server">
     <table class="style1">
         <tr>
