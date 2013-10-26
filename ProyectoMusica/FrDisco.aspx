@@ -6,7 +6,8 @@
     <table class="style1">
         <tr>
             <td>
-                <asp:Button ID="btAtras" runat="server" Text="&lt;- Atrás" />
+                <asp:Button ID="btAtras" runat="server" onclick="btAtras_Click" 
+                    Text="&lt;- Atrás" />
             </td>
             <td>
                 <asp:Label ID="lbNombre" runat="server" Text="Nombre: "></asp:Label>

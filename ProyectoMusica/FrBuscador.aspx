@@ -19,7 +19,8 @@
         <table class="style1" border="2">
             <tr>
                 <td colspan="2">
-                    <asp:Button ID="btAtras" runat="server" Text="&lt;- Atrás" />
+                    <asp:Button ID="btAtras" runat="server" Text="&lt;- Atrás" 
+                        onclick="btAtras_Click" />
                 </td>
                 <td colspan="2">
                     <asp:Label ID="lbMensaje" runat="server" Text="¿Qué deseas buscar?"></asp:Label>

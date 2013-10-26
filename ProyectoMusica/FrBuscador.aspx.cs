@@ -29,4 +29,8 @@ public partial class FrBuscador : System.Web.UI.Page
     {
         Response.Redirect("FrGenero.aspx");
     }
+    protected void btAtras_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("FrIngresar.aspx");
+    }
 }
