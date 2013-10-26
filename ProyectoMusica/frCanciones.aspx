@@ -30,7 +30,8 @@
             <td>
                 &nbsp;</td>
             <td>
-                <asp:Button ID="btBuscar" runat="server" Text="Buscar" />
+                <asp:Button ID="btBuscar" runat="server" Text="Buscar" 
+                    onclick="btBuscar_Click1" />
             </td>
         </tr>
         <tr>

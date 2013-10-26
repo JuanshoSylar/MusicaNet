@@ -14,10 +14,7 @@ public partial class frCanciones : System.Web.UI.Page
     {
         leer();
     }
-    protected void btBuscar_Click(object sender, EventArgs e)
-    {
-        leer();
-    }
+  
 
     public void leer()
     {
@@ -34,5 +31,9 @@ public partial class frCanciones : System.Web.UI.Page
         // txtMsg.Text = grDatosCanciones.SelectedIndex.ToString() + row["id"].ToString();
         Session["id"] = row["id"].ToString();
         Response.Redirect("frCancion.aspx");//llena los datos de cancionadmin
+    }
+    protected void btBuscar_Click1(object sender, EventArgs e)
+    {
+        leer();
     }
 }
