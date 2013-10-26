@@ -32,7 +32,8 @@
             <td>
                 &nbsp;</td>
             <td>
-                &nbsp;</td>
+                <asp:Button ID="btCancelar" runat="server" Text="Cancelar" />
+            </td>
             <td>
                 &nbsp;</td>
         </tr>
