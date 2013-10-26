@@ -7,7 +7,7 @@
     <table class="style1">
         <tr>
             <td>
-                <asp:Label ID="Label1" runat="server" Text="Id"></asp:Label>
+                <asp:Label ID="lbIdCan" runat="server" Text="Id"></asp:Label>
             </td>
             <td>
                 <asp:TextBox ID="txtId" runat="server"></asp:TextBox>
@@ -24,7 +24,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="Label2" runat="server" Text="Nombre"></asp:Label>
+                <asp:Label ID="lbNombre" runat="server" Text="Nombre"></asp:Label>
             </td>
             <td>
                 <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
@@ -39,7 +39,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="Label3" runat="server" Text="Artista"></asp:Label>
+                <asp:Label ID="LbArtista" runat="server" Text="Artista"></asp:Label>
             </td>
             <td>
                 <asp:TextBox ID="txtArtista" runat="server"></asp:TextBox>
@@ -53,7 +53,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="Label4" runat="server" Text="Genero"></asp:Label>
+                <asp:Label ID="lbGenero" runat="server" Text="Genero"></asp:Label>
             </td>
             <td>
                 <asp:TextBox ID="txtGenero" runat="server"></asp:TextBox>
