@@ -32,10 +32,6 @@
         </tr>
         <tr>
             <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td>
                 <asp:GridView ID="GrDatosCancion" runat="server" AutoGenerateColumns="False" 
                     onselectedindexchanged="GrDatosCancion_SelectedIndexChanged">
                     <Columns>
@@ -44,6 +40,10 @@
                     </Columns>
                 </asp:GridView>
             </td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
             <td>
                 &nbsp;</td>
         </tr>
