@@ -42,7 +42,6 @@ namespace BibliotecaMusica.DAO
             BD bd = Conexion.BD.getInstance();
             bd.sqlEjecutar(sql);
             return true;
-
         }
 
         public static Boolean sqlUpdate(Disco disco)
