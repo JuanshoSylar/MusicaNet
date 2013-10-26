@@ -35,15 +35,15 @@
                 </td>
                 <td colspan="2">
                     <asp:Button ID="btDisco" runat="server" Height="50px" Text="Disco" 
-                        Width="100px" />
+                        Width="100px" onclick="btDisco_Click" />
                 </td>
                 <td colspan="2">
                     <asp:Button ID="btCancion" runat="server" Height="50px" Text="Canción" 
-                        Width="100px" />
+                        Width="100px" onclick="btCancion_Click" />
                 </td>
                 <td>
                     <asp:Button ID="btGenero" runat="server" Height="50px" Text="Género" 
-                        Width="100px" />
+                        Width="100px" onclick="btGenero_Click" />
                 </td>
             </tr>
             <tr>

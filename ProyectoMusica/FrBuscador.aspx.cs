@@ -17,4 +17,16 @@ public partial class FrBuscador : System.Web.UI.Page
     {
 
     }
+    protected void btDisco_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("FrDisco.aspx");
+    }
+    protected void btCancion_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("FrCancion.aspx");
+    }
+    protected void btGenero_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("FrGenero.aspx");
+    }
 }
