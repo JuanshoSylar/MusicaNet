@@ -8,13 +8,13 @@ namespace BibliotecaMusica.Entity
     public class Artista
     {
         private int id;
+        private String nombre;
 
         public int Id
         {
             get { return id; }
             set { id = value; }
         }
-        private String nombre;
 
         public String Nombre
         {
@@ -24,8 +24,13 @@ namespace BibliotecaMusica.Entity
 
         public Artista()
         {
+        }
+
+        public Artista(int id)
+        {
             Id = id;
         }
+
         public Artista(int id, String nombre)
         {
             Id = id;
