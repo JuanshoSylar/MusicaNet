@@ -8,13 +8,14 @@ namespace BibliotecaMusica.Entity
     public class Cancion
     {
         private int id;
-
+        private String nombre;
+        private int idDisco;
+        
         public int Id
         {
             get { return id; }
             set { id = value; }
         }
-        private String nombre;
 
         public String Nombre
         {
@@ -22,14 +23,32 @@ namespace BibliotecaMusica.Entity
             set { nombre = value; }
         }
 
+        public int IdDisco
+        {
+            get { return idDisco; }
+            set { idDisco = value; }
+        }
+
         public Cancion()
+        {
+        }
+
+        public Cancion(int id)
         {
             Id = id;
         }
+
         public Cancion(int id, String nombre)
         {
             Id = id;
             Nombre = nombre;
+        }
+
+        public Cancion(int id, String nombre, int idDisco)
+        {
+            Id = id;
+            Nombre = nombre;
+            IdDisco = idDisco;
         }
     }
 }
