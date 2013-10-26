@@ -6,14 +6,6 @@
         {
             width: 237px;
         }
-        .style3
-        {
-            width: 247px;
-        }
-    .style4
-    {
-        width: 240px;
-    }
         .style5
         {
             width: 237px;
@@ -22,11 +14,7 @@
         {
             height: 20px;
         }
-        .style7
-        {
-            height: 20px;
-        }
-    </style>
+        </style>
 </asp:Content>
 
 
@@ -38,28 +26,20 @@
                 <asp:TextBox ID="txtNombreCan" runat="server" Height="22px" Width="128px"></asp:TextBox>
             </td>
             <td>
-                <asp:Label ID="Genero" runat="server" Text="Genero"></asp:Label>
-                <asp:TextBox ID="txtGeneroCan" runat="server"></asp:TextBox>
-            </td>
+                &nbsp;</td>
             <td>
-                <asp:Label ID="lbArtistaCan" runat="server" Text="Artista:"></asp:Label>
-                <asp:TextBox ID="txtArtistaCan" runat="server"></asp:TextBox>
-            </td>
+                &nbsp;</td>
             <td>
                 <asp:Button ID="btBuscar" runat="server" Text="Buscar" />
             </td>
         </tr>
         <tr>
             <td class="style5">
-                <asp:GridView ID="grDatosCanciones" runat="server">
+                <asp:GridView ID="grDatosCanciones" runat="server" AutoGenerateColumns="False">
                     <Columns>
-                        <asp:BoundField HeaderText="ID" />
-                        <asp:BoundField HeaderText="Nombre" />
-                        <asp:BoundField HeaderText="Genero" />
-                        <asp:BoundField HeaderText="Album" />
-                        <asp:BoundField HeaderText="Artista" />
-                        <asp:BoundField />
-                        <asp:ButtonField ImageUrl="~/imagenes/images.jpg" Text="Añadir al Carrito" />
+                        <asp:BoundField HeaderText="ID" DataField="id" />
+                        <asp:BoundField HeaderText="Nombre" DataField="nombre" />
+                        <asp:BoundField HeaderText="Artista" DataField="idArtista" />
                     </Columns>
                 </asp:GridView>
             </td>
