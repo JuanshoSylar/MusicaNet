@@ -51,7 +51,6 @@ namespace BibliotecaMusica.DAO
             BD bd = Conexion.BD.getInstance();
             bd.sqlEjecutar(sql);
             return true;
-        }
-         
+        }         
     }
 }
