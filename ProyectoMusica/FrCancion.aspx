@@ -7,7 +7,7 @@
     <table class="style1">
         <tr>
             <td>
-                <asp:Label ID="Label1" runat="server" Text="Nombre de la cancion"></asp:Label>
+                <asp:Label ID="LNombreCancion" runat="server" Text="Nombre de la cancion"></asp:Label>
             </td>
             <td>
                 <asp:TextBox ID="txtnombreC" runat="server"></asp:TextBox>
