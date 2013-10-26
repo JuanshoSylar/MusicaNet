@@ -14,7 +14,7 @@ namespace BibliotecaMusica.DAO
         {
             DataTable dt = new DataTable();
             BD bd = Conexion.BD.getInstance();
-            String sql = "Select * from cancion where 1=1";
+            String sql = "Select * from cancion where 1=1 ";
             if (nombre.Trim() != "") sql += String.Format(" and nombre like '%{0}%'", nombre);
             dt = bd.sqlSelect(20, sql);
             return dt;

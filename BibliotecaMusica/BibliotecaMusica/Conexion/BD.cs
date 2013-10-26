@@ -10,7 +10,7 @@ namespace BibliotecaMusica.Conexion
     public class BD
     {
         //String stConec="Data Source=10.20.64.5;Initial Catalog=ventaProductos;Port=3307;User ID=LibreriaMusica;Password=-juan20121993";
-        String stConec = "DRIVER={MySQL ODBC 3.51 Driver};SERVER=localhost;Port=3306;DATABASE=proyectoMusica;UID=root;PWD=";
+        String stConec = "DRIVER={MySQL ODBC 3.51 Driver};SERVER=localhost;Port=3306;DATABASE=libreriaMusica;UID=root;PWD=";
         //String stConec = @"Data Source=localhost\sqlexpress;Initial Catalog=master;Integrated Security=True";
 
         OdbcConnection cnn;

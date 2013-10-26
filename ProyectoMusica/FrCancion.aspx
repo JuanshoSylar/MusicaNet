@@ -13,7 +13,8 @@
                 <asp:TextBox ID="txtnombreC" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:Button ID="btLeer" runat="server" Text="Buscar Cancion" />
+                <asp:Button ID="btLeer" runat="server" Text="Buscar Cancion" 
+                    onclick="btLeer_Click" />
             </td>
             <td>
                 &nbsp;</td>
@@ -31,18 +32,18 @@
         </tr>
         <tr>
             <td>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                <asp:GridView ID="GrDatosCancion" runat="server" AutoGenerateColumns="False" 
+                    onselectedindexchanged="GrDatosCancion_SelectedIndexChanged">
                     <Columns>
                         <asp:BoundField DataField="id" HeaderText="Id" />
-                        <asp:BoundField DataField="disco" HeaderText="Disco" />
-                        <asp:BoundField DataField="idArtista" HeaderText="Artista" />
+                        <asp:BoundField DataField="nombre" HeaderText="Disco" />
                     </Columns>
                 </asp:GridView>
             </td>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
             <td>
                 &nbsp;</td>
         </tr>

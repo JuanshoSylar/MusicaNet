@@ -8,7 +8,7 @@ using BibliotecaMusica.Entity;
 
 namespace BibliotecaMusica.DAO
 {
-    class DAOGenero
+   public class DAOGenero
     {
         public static DataTable sqlLeerTodas(int cuantos, String nombre)
         {
