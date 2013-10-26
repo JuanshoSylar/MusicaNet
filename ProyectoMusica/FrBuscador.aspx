@@ -16,7 +16,7 @@
     <form id="form1" runat="server">
     <div>
     
-        <table class="style1">
+        <table class="style1" border="2">
             <tr>
                 <td colspan="2">
                     <asp:Button ID="btAtras" runat="server" Text="&lt;- Atrás" />
@@ -30,19 +30,19 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Button ID="Button1" runat="server" Height="50px" Text="Button" 
+                    <asp:Button ID="btArtista" runat="server" Height="50px" Text="Artista" 
                         Width="100px" />
                 </td>
                 <td colspan="2">
-                    <asp:Button ID="Button2" runat="server" Height="50px" Text="Button" 
+                    <asp:Button ID="btDisco" runat="server" Height="50px" Text="Disco" 
                         Width="100px" />
                 </td>
                 <td colspan="2">
-                    <asp:Button ID="Button3" runat="server" Height="50px" Text="Button" 
+                    <asp:Button ID="btCancion" runat="server" Height="50px" Text="Canción" 
                         Width="100px" />
                 </td>
                 <td>
-                    <asp:Button ID="Button4" runat="server" Height="50px" Text="Button" 
+                    <asp:Button ID="btGenero" runat="server" Height="50px" Text="Género" 
                         Width="100px" />
                 </td>
             </tr>
