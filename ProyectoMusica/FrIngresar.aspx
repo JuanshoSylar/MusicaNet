@@ -19,7 +19,7 @@
         <table class="style1" border="2">
             <tr>
                 <td>
-                    <asp:Label ID="idMensajeIngresar" runat="server" 
+                    <asp:Label ID="lbMensajeIngresar" runat="server" 
                         Text="Por favor... escribe Nombre y Clave"></asp:Label>
                 </td>
             </tr>

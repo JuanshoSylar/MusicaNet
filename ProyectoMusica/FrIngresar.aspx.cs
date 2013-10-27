@@ -23,6 +23,15 @@ public partial class FrIngresar : System.Web.UI.Page
     }
     protected void btIngresar_Click(object sender, EventArgs e)
     {
-        Response.Redirect("FrBuscador.aspx");
+        BibliotecaMusica.Entity.Usuarios usuario = new BibliotecaMusica.Entity.Usuarios(txUsuario.Text, txClave.Text);
+        if (!BibliotecaMusica.DAO.DAOUsuarios.login(usuario))
+        {
+            lbMensajeIngresar.Text = "Error. Usuario y/o Clave inválido.";
+        }
+        else
+        {
+            Session["usuario"] = usuario;
+            Response.Redirect("FrBuscador.aspx");
+        }
     }
 }
