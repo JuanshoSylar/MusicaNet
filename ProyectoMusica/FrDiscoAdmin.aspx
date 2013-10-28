@@ -10,10 +10,10 @@
             </td>
             <td>
                 <asp:TextBox ID="txId" runat="server"></asp:TextBox>
-                <asp:Button ID="btAyuda" runat="server" Text="?" />
+                <asp:Button ID="btAyuda" runat="server" onclick="btAyuda_Click" Text="?" />
             </td>
             <td>
-                <asp:Button ID="btLeer" runat="server" Text="Leer" />
+                <asp:Button ID="btLeer" runat="server" onclick="btLeer_Click" Text="Leer" />
             </td>
             <td>
                 <asp:Button ID="btCerrar" runat="server" Text="Cerrar" />
@@ -39,13 +39,15 @@
                 <asp:TextBox ID="txArtista" runat="server"></asp:TextBox>
             </td>
             <td>
-                &nbsp;</td>
+                <asp:Label ID="lbMensaje" runat="server"></asp:Label>
+            </td>
             <td>
                 &nbsp;</td>
         </tr>
         <tr>
             <td>
-                <asp:Button ID="btAgregar" runat="server" Text="Agregar" />
+                <asp:Button ID="btAgregar" runat="server" onclick="btAgregar_Click" 
+                    Text="Agregar" />
             </td>
             <td>
                 <asp:Button ID="btActualizar" runat="server" Text="Actualizar" />

@@ -48,4 +48,8 @@ public partial class FrDisco : System.Web.UI.Page
     {
         leer();
     }
+    protected void btAdministrar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("FrDiscoAdmin.aspx");
+    }
 }
