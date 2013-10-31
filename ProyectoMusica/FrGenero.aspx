@@ -7,7 +7,8 @@
     <table class="style1">
         <tr>
             <td>
-                <asp:Button ID="btAtras" runat="server" Text="&lt;-Atras" />
+                <asp:Button ID="btAtras" runat="server" Text="&lt;-Atras" 
+                    onclick="btAtras_Click" style="height: 26px" />
             </td>
             <td>
                 Genero:<asp:TextBox ID="txGenero" runat="server"></asp:TextBox>
