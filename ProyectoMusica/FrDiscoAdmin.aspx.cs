@@ -20,11 +20,7 @@ public partial class FrDiscoAdmin : System.Web.UI.Page
     }
     protected void btLeer_Click(object sender, EventArgs e)
     {
-        BibliotecaMusica.Entity.Disco disco = new BibliotecaMusica.Entity.Disco(int.Parse(txId.Text));
-        BibliotecaMusica.DAO.DAODisco.sqlLeer(disco);
-        
-        txNombre.Text = disco.Nombre;
-        
+        leer();        
     }
     protected void btAgregar_Click(object sender, EventArgs e)
     {
@@ -45,8 +41,10 @@ public partial class FrDiscoAdmin : System.Web.UI.Page
     {
         BibliotecaMusica.Entity.Disco disco = new BibliotecaMusica.Entity.Disco(int.Parse(txId.Text));
         BibliotecaMusica.DAO.DAODisco.sqlLeer(disco);
-    }
 
+        txNombre.Text = disco.Nombre;
+        txArtista.Text = disco.IdArtista.ToString();
+    }
     protected void btAyuda_Click(object sender, EventArgs e)
     {
         Response.Redirect("FrDisco.aspx");
