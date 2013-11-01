@@ -24,7 +24,7 @@ namespace BibliotecaMusica.DAO
         {
             String sql = "Select * from disco where id = '" + disco.Id + "'";
              BD bd = Conexion.BD.getInstance();
-             bd.sqlEjecutar(sql);
+             bd.sqlSelect(sql);
              return disco;
         }
 

@@ -10,6 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
+using BibliotecaMusica.Entity;
 
 public partial class FrDiscoAdmin : System.Web.UI.Page
 {
@@ -19,6 +20,10 @@ public partial class FrDiscoAdmin : System.Web.UI.Page
     }
     protected void btLeer_Click(object sender, EventArgs e)
     {
+        BibliotecaMusica.Entity.Disco disco = new BibliotecaMusica.Entity.Disco(int.Parse(txId.Text));
+        BibliotecaMusica.DAO.DAODisco.sqlLeer(disco);
+        
+        txNombre.Text = disco.Nombre;
         
     }
     protected void btAgregar_Click(object sender, EventArgs e)
@@ -32,11 +37,16 @@ public partial class FrDiscoAdmin : System.Web.UI.Page
         {
             lbMensaje.Text = "Disco agregado exitosamente";
             Session["id"] = disco;
-        }
-
-        
-        
+        }        
     }
+
+
+    public void leer()
+    {
+        BibliotecaMusica.Entity.Disco disco = new BibliotecaMusica.Entity.Disco(int.Parse(txId.Text));
+        BibliotecaMusica.DAO.DAODisco.sqlLeer(disco);
+    }
+
     protected void btAyuda_Click(object sender, EventArgs e)
     {
         Response.Redirect("FrDisco.aspx");

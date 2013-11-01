@@ -10,13 +10,13 @@ namespace BibliotecaMusica.DAO
 {
    public class DAOArtista
     {
-        public static DataTable sqlLeerTodas(int cuantos, String nombre)
+        public static DataTable sqlLeerTodas(String nombre)
         {
             DataTable dt = new DataTable();
             BD bd = Conexion.BD.getInstance();
             String sql = "Select * from artista where 1=1";
             if (nombre.Trim() != "") sql += String.Format(" and nombre like '%{0}%'", nombre);
-            dt = bd.sqlSelect(cuantos, sql);
+            dt = bd.sqlSelect(sql);
             return dt;
         }
 
