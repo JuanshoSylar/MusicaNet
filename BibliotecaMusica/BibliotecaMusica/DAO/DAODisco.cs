@@ -25,7 +25,19 @@ namespace BibliotecaMusica.DAO
             String sql = "Select * from disco where id = '" + disco.Id + "'";
              BD bd = Conexion.BD.getInstance();
              bd.sqlSelect(sql);
-             return disco;
+
+            DataTable dt = BD.getInstance().sqlSelect(sql);
+
+            if (dt.Rows.Count == 0)
+            {
+                return null;
+            }
+
+            disco.Id = int.Parse(dt.Rows[0]["id"].ToString());
+            disco.Nombre = dt.Rows[0]["nombre"].ToString();
+            disco.IdArtista = int.Parse(dt.Rows[0]["idArtista"].ToString());
+
+            return disco;
         }
 
         public static Boolean sqlInsert(Disco disco)

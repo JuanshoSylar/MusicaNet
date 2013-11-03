@@ -39,11 +39,12 @@ public partial class FrDiscoAdmin : System.Web.UI.Page
 
     public void leer()
     {
-        BibliotecaMusica.Entity.Disco disco = new BibliotecaMusica.Entity.Disco(int.Parse(txId.Text));
-        BibliotecaMusica.DAO.DAODisco.sqlLeer(disco);
-
-        txNombre.Text = disco.Nombre;
-        txArtista.Text = disco.IdArtista.ToString();
+        BibliotecaMusica.Entity.Disco disco = BibliotecaMusica.DAO.DAODisco.sqlLeer(new BibliotecaMusica.Entity.Disco(int.Parse(txId.Text)));
+        if (disco != null)
+        {
+            txNombre.Text = disco.Nombre;
+            txArtista.Text = disco.IdArtista.ToString();
+        }
     }
     protected void btAyuda_Click(object sender, EventArgs e)
     {
