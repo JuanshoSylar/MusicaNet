@@ -10,7 +10,6 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
-using BibliotecaMusica.DAO;
 using BibliotecaMusica.Entity;
 
 public partial class FrDiscoAdmin : System.Web.UI.Page
@@ -21,24 +20,12 @@ public partial class FrDiscoAdmin : System.Web.UI.Page
     }
     protected void btLeer_Click(object sender, EventArgs e)
     {
-        Disco disco = DAODisco.sqlLeer(new Disco(int.Parse(txId.Text)));
-        if (disco != null)
-        {
-            txNombre.Text = disco.Nombre;
-            txArtista.Text = disco.IdArtista.ToString();
-            lbMensaje.Text = "Dato seleccionado";
-        }
-        else
-        {
-            lbMensaje.Text = "Error. ID no válida.";
-            txNombre.Text = "";
-            txArtista.Text = "";
-        }
+        leer();        
     }
     protected void btAgregar_Click(object sender, EventArgs e)
     {
-        Disco disco = new Disco(int.Parse(txId.Text), txNombre.Text, int.Parse(txArtista.Text));
-        if (!DAODisco.sqlInsert(disco))
+        BibliotecaMusica.Entity.Disco disco = new BibliotecaMusica.Entity.Disco(int.Parse(txId.Text), txNombre.Text, int.Parse(txArtista.Text));
+        if (!BibliotecaMusica.DAO.DAODisco.sqlInsert(disco))
         {
             lbMensaje.Text = "Error. No se pudo agregar el disco";
         }
@@ -49,24 +36,18 @@ public partial class FrDiscoAdmin : System.Web.UI.Page
         }        
     }
 
+
+    public void leer()
+    {
+        BibliotecaMusica.Entity.Disco disco = BibliotecaMusica.DAO.DAODisco.sqlLeer(new BibliotecaMusica.Entity.Disco(int.Parse(txId.Text)));
+        if (disco != null)
+        {
+            txNombre.Text = disco.Nombre;
+            txArtista.Text = disco.IdArtista.ToString();
+        }
+    }
     protected void btAyuda_Click(object sender, EventArgs e)
     {
         Response.Redirect("FrDisco.aspx");
-    }
-
-    protected void btActualizar_Click(object sender, EventArgs e)
-    {
-        
-    }
-
-    protected void btEliminar_Click(object sender, EventArgs e)
-    {
-        if (txId.Text != null)
-        {
-            DAODisco.sqlDelete(new Disco(int.Parse(txId.Text)));
-            lbMensaje.Text = "Disco eliminado";
-        }
-        else
-            lbMensaje.Text = "No se pudo eliminar el disco";
     }
 }

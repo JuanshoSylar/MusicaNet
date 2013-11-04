@@ -62,20 +62,6 @@ namespace BibliotecaMusica.DAO
             BD bd = Conexion.BD.getInstance();
             bd.sqlEjecutar(sql);
             return true;
-        }
-
-        public static bool sqlVerificar(Disco disco)
-        {
-            DataTable dt = new DataTable();
-            BD bd = Conexion.BD.getInstance();
-            String sql = "Select * from disco where id = '" + disco.Id + "'";
-            dt = bd.sqlSelect(sql);
-            if (dt.Rows.Count != 0)
-            {
-                return true;
-            }
-            return false;
-        }
-
+        }         
     }
 }
