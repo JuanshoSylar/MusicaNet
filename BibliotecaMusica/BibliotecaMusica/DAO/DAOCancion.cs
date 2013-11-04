@@ -46,7 +46,7 @@ namespace BibliotecaMusica.DAO
 
         public static Boolean sqlUpdate(Cancion cancion)
         {
-            string sql = "Update cancion set nombre '" + cancion.Nombre + "', idDisco = '" + cancion.IdDisco + "' where id = '" + cancion.Id + "'";
+            string sql = "Update cancion set nombre = '" + cancion.Nombre + "', idDisco = '" + cancion.IdDisco + "' where id = '" + cancion.Id + "'";
             BD bd = Conexion.BD.getInstance();
             bd.sqlEjecutar(sql);
             return true;
