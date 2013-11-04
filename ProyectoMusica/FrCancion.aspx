@@ -58,7 +58,9 @@
                     Text="&lt;--- Atras " />
             </td>
             <td>
-                &nbsp;</td>
+                <asp:Button ID="btAdministrar" runat="server" onclick="btAdministrar_Click" 
+                    Text="Administrar" />
+            </td>
             <td>
                 &nbsp;</td>
         </tr>

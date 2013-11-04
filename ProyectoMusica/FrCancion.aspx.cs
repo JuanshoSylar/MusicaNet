@@ -16,7 +16,18 @@ public partial class FrCancion : System.Web.UI.Page
     DataTable dt;
     protected void Page_Load(object sender, EventArgs e)
     {
+        BibliotecaMusica.Entity.Usuarios usuario = (BibliotecaMusica.Entity.Usuarios)Session["usuario"];
+        if (BibliotecaMusica.DAO.DAOUsuarios.esAdmin(usuario))
+        {
+            btAdministrar.Visible = true;
+        }
+        else
+        {
+            btAdministrar.Visible = false;
+        }
         leer();
+
+        //leer();
     }
     protected void btAtras_Click(object sender, EventArgs e)
     {
@@ -38,5 +49,9 @@ public partial class FrCancion : System.Web.UI.Page
         dt = BibliotecaMusica.DAO.DAOCancion.sqlLeerTodas(txtnombreC.Text);
         GrDatosCancion.DataSource = dt;
         GrDatosCancion.DataBind();
+    }
+    protected void btAdministrar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("FrCancionAdmin.aspx");
     }
 }

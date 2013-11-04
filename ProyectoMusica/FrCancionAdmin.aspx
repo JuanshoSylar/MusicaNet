@@ -13,13 +13,16 @@
                 <asp:TextBox ID="txtId" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:Button ID="btAgregar" runat="server" Text="Agregar" />
+                <asp:Button ID="btAgregar" runat="server" Text="Agregar" 
+                    onclick="btAgregar_Click" />
             </td>
             <td>
-                <asp:Button ID="btActualizar" runat="server" Text="Actualizar" />
+                <asp:Button ID="btActualizar" runat="server" Text="Actualizar" 
+                    onclick="btActualizar_Click" />
             </td>
             <td>
-                <asp:Button ID="btEliminar" runat="server" Text="Eliminar" />
+                <asp:Button ID="btEliminar" runat="server" Text="Eliminar" 
+                    onclick="btEliminar_Click" />
             </td>
         </tr>
         <tr>
@@ -33,31 +36,17 @@
                 <asp:Button ID="btAtras" runat="server" onclick="btAtras_Click" Text="?" />
             </td>
             <td>
-                <asp:Button ID="btCancelar" runat="server" Text="Cancelar" />
+                <asp:Button ID="btLeer" runat="server" onclick="btLeer_Click" Text="Leer" />
             </td>
             <td>
                 &nbsp;</td>
         </tr>
         <tr>
             <td>
-                <asp:Label ID="LbArtista" runat="server" Text="Artista"></asp:Label>
+                <asp:Label ID="LbArtista" runat="server" Text="Disco"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtArtista" runat="server"></asp:TextBox>
-            </td>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-        </tr>
-        <tr>
-            <td>
-                <asp:Label ID="lbGenero" runat="server" Text="Genero"></asp:Label>
-            </td>
-            <td>
-                <asp:TextBox ID="txtGenero" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtDisco" runat="server"></asp:TextBox>
             </td>
             <td>
                 &nbsp;</td>
@@ -69,6 +58,19 @@
         <tr>
             <td>
                 &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="lbMensaje" runat="server" Text="  "></asp:Label>
+            </td>
             <td>
                 &nbsp;</td>
             <td>
