@@ -50,10 +50,12 @@
                     Text="Agregar" />
             </td>
             <td>
-                <asp:Button ID="btActualizar" runat="server" Text="Actualizar" />
+                <asp:Button ID="btActualizar" runat="server" Text="Actualizar" 
+                    onclick="btActualizar_Click" />
             </td>
             <td>
-                <asp:Button ID="btEliminar" runat="server" Text="Eliminar" />
+                <asp:Button ID="btEliminar" runat="server" Text="Eliminar" 
+                    onclick="btEliminar_Click" />
             </td>
             <td>
                 <asp:Button ID="btLimpiar" runat="server" Text="Limpiar" />
