@@ -10,6 +10,8 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
+using BibliotecaMusica.Entity;
+using BibliotecaMusica.DAO;
 
 public partial class FrArtista : System.Web.UI.Page
 {
@@ -41,8 +43,8 @@ public partial class FrArtista : System.Web.UI.Page
     {
         dt = BibliotecaMusica.DAO.DAOArtista.sqlLeerTodas(txNombre.Text);
         gArtista.DataSource = dt;
-        gArtista.DataBind();   
-    }//Me tira error en biblioteca musica el error dice que ninguna sobrecarga para el metodo sqlLeerTodas acepta 1 argumento
+        gArtista.DataBind();
+    }
     protected void btBuscar_Click(object sender, EventArgs e)
     {
         leer();

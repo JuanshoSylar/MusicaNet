@@ -8,7 +8,7 @@ using BibliotecaMusica.Entity;
 
 namespace BibliotecaMusica.DAO
 {
-   public class DAOArtista
+    public class DAOArtista
     {
         public static DataTable sqlLeerTodas(String nombre)
         {
@@ -24,7 +24,19 @@ namespace BibliotecaMusica.DAO
         {
             String sql = "Select * from artista where id = '" + artista.Id + "'";
             BD bd = Conexion.BD.getInstance();
-            bd.sqlEjecutar(sql);
+            bd.sqlSelect(sql);
+
+            DataTable dt = BD.getInstance().sqlSelect(sql);
+
+            if (dt.Rows.Count == 0)
+            {
+                return null;
+            }
+
+            artista.Id = int.Parse(dt.Rows[0]["id"].ToString());
+            artista.Nombre = dt.Rows[0]["nombre"].ToString();
+
+
             return artista;
         }
 
@@ -46,10 +58,24 @@ namespace BibliotecaMusica.DAO
 
         public static Boolean sqlUpdate(Artista artista)
         {
-            string sql = "Update artista set nombre '" + artista.Nombre + "' where id = '" + artista.Id + "'";
+            string sql = "Update artista set nombre= '" + artista.Nombre + "' where id = '" + artista.Id + "'";
             BD bd = Conexion.BD.getInstance();
             bd.sqlEjecutar(sql);
             return true;
-        }   
+        }
+
+        //public static bool sqlVerificar(Artista artista)
+        //{
+        //    DataTable dt = new DataTable();
+        //    BD bd = Conexion.BD.getInstance();
+        //    String sql = "Select * from disco where id = '" + artista.Id + "'";
+        //    dt = bd.sqlSelect(sql);
+        //    if (dt.Rows.Count != 0)
+        //    {
+        //        return true;
+        //    }
+        //    return false;
+        //}
     }
 }
+

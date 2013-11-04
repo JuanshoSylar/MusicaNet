@@ -19,7 +19,7 @@
                     Text="Buscar" />
             </td>
             <td>
-                <asp:Button ID="btCancelar" runat="server" Text="Cancelar" />
+                <asp:Button ID="btCerrar" runat="server" Text="Cerrar" />
             </td>
         </tr>
         <tr>

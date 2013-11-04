@@ -33,4 +33,9 @@ public partial class FrBuscador : System.Web.UI.Page
     {
         Response.Redirect("FrIngresar.aspx");
     }
+    protected void btArtista_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("FrArtista.aspx");
+            
+    }
 }

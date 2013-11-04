@@ -16,7 +16,8 @@
                 <asp:Button ID="btLeer" runat="server" onclick="btLeer_Click" Text="Leer" />
             </td>
             <td>
-                <asp:Button ID="btSalir" runat="server" Text="Salir" />
+                <asp:Button ID="btCerrar" runat="server" Text="Cerrar" 
+                    onclick="btCerrar_Click" />
             </td>
         </tr>
         <tr>
@@ -51,10 +52,12 @@
                     Text="Actualizar" />
             </td>
             <td>
-                <asp:Button ID="btEliminar" runat="server" Text="Eliminar" />
+                <asp:Button ID="btEliminar" runat="server" Text="Eliminar" 
+                    onclick="btEliminar_Click" />
             </td>
             <td>
-                <asp:Button ID="btCancelar" runat="server" Text="Cancelar" />
+                <asp:Button ID="btLimpiar" runat="server" Text="Limpiar" 
+                    onclick="btLimpiar_Click" />
             </td>
         </tr>
     </table>

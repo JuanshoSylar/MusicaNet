@@ -32,7 +32,7 @@
             <tr>
                 <td>
                     <asp:Button ID="btArtista" runat="server" Height="50px" Text="Artista" 
-                        Width="100px" />
+                        Width="100px" onclick="btArtista_Click" />
                 </td>
                 <td colspan="2">
                     <asp:Button ID="btDisco" runat="server" Height="50px" Text="Disco" 
