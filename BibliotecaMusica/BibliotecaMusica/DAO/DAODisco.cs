@@ -10,12 +10,35 @@ namespace BibliotecaMusica.DAO
 {
     public class DAODisco
     {
+        //public static DataTable sqlLeerTodas(String nombre)
+        //{
+        //    DataTable dt = new DataTable();
+        //    BD bd = Conexion.BD.getInstance();
+        //    String sql = "Select * from disco where 1=1";
+        //    if (nombre.Trim() != "") sql += String.Format(" and nombre like '%{0}%'", nombre);
+        //    dt = bd.sqlSelect(sql);
+        //    return dt;
+        //}
+
         public static DataTable sqlLeerTodas(String nombre)
         {
             DataTable dt = new DataTable();
             BD bd = Conexion.BD.getInstance();
-            String sql = "Select * from disco where 1=1";
-            if (nombre.Trim() != "") sql += String.Format(" and nombre like '%{0}%'", nombre);
+            String sql = @"SELECT  d.Id,
+                                  d.nombre as nomDisco,
+                                  a.nombre as nomArtista
+		                        FROM disco d, artista a
+                                where a.Id = d.IdArtista";
+            if (nombre.Trim() != "") sql += String.Format(" and d.nombre like '%{0}%'", nombre);
+            dt = bd.sqlSelect(sql);
+            return dt;
+        }
+
+        public static DataTable sqlLeerTodas( )
+        {
+            DataTable dt = new DataTable();
+            BD bd = Conexion.BD.getInstance();
+            String sql = "Select * from artista order by nombre asc";
             dt = bd.sqlSelect(sql);
             return dt;
         }
