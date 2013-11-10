@@ -46,7 +46,8 @@
                 <asp:Label ID="LbArtista" runat="server" Text="Disco"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtDisco" runat="server"></asp:TextBox>
+                <asp:DropDownList ID="DropDownList1" runat="server">
+                </asp:DropDownList>
             </td>
             <td>
                 &nbsp;</td>
@@ -59,7 +60,8 @@
             <td>
                 &nbsp;</td>
             <td>
-                &nbsp;</td>
+                <asp:TextBox ID="txtDisco" runat="server"></asp:TextBox>
+            </td>
             <td>
                 &nbsp;</td>
             <td>

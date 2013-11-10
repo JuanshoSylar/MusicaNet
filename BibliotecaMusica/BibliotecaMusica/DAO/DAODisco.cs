@@ -34,15 +34,6 @@ namespace BibliotecaMusica.DAO
             return dt;
         }
 
-        public static DataTable sqlLeerTodas( )
-        {
-            DataTable dt = new DataTable();
-            BD bd = Conexion.BD.getInstance();
-            String sql = "Select * from artista order by nombre asc";
-            dt = bd.sqlSelect(sql);
-            return dt;
-        }
-
         public static Disco sqlLeer(Disco disco)
         {
             String sql = "Select * from disco where id = '" + disco.Id + "'";

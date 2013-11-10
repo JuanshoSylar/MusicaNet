@@ -19,6 +19,15 @@ namespace BibliotecaMusica.DAO
             dt = bd.sqlSelect(sql);
             return dt;
         }
+        
+        public static DataTable sqlLeerTodas()
+        {
+            DataTable dt = new DataTable();
+            BD bd = Conexion.BD.getInstance();
+            String sql = "Select * from artista order by nombre asc";
+            dt = bd.sqlSelect(sql);
+            return dt;
+        }
 
         public static Artista sqlLeer(Artista artista)
         {

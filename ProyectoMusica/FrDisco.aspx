@@ -39,8 +39,8 @@
                     onselectedindexchanged="grDisco_SelectedIndexChanged">
                     <Columns>
                         <asp:BoundField DataField="id" HeaderText="ID" />
-                        <asp:BoundField DataField="nombre" HeaderText="Nombre" />
-                        <asp:BoundField DataField="idArtista" HeaderText="Artista" />
+                        <asp:BoundField DataField="nomDisco" HeaderText="Nombre" />
+                        <asp:BoundField DataField="nomArtista" HeaderText="Artista" />
                     </Columns>
                 </asp:GridView>
             </td>

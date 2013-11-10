@@ -37,6 +37,8 @@
             </td>
             <td>
                 <asp:TextBox ID="txArtista" runat="server"></asp:TextBox>
+                <asp:DropDownList ID="cbArtista" runat="server">
+                </asp:DropDownList>
             </td>
             <td>
                 <asp:Label ID="lbMensaje" runat="server"></asp:Label>
