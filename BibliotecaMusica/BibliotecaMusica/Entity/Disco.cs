@@ -10,7 +10,8 @@ namespace BibliotecaMusica.Entity
         private int id;
         private String nombre;
         private int idArtista;
-                
+        private int precio;
+                                
         public int Id
         {
             get { return id; }
@@ -29,6 +30,12 @@ namespace BibliotecaMusica.Entity
             set { idArtista = value; }
         }
 
+        public int Precio
+        {
+            get { return precio; }
+            set { precio = value; }
+        }
+
         public Disco()
         {
         }
@@ -44,11 +51,12 @@ namespace BibliotecaMusica.Entity
             Nombre = nombre;
         }
 
-        public Disco(int id, String nombre, int idArtista)
+        public Disco(int id, String nombre, int idArtista, int precio)
         {
             Id = id;
             Nombre = nombre;
             IdArtista = idArtista;
+            Precio = precio;
         }
     }
 }

@@ -17,11 +17,10 @@ public partial class FrDiscoAdmin : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        artista();
+        if(!IsPostBack) artista();
     }
     protected void btLeer_Click(object sender, EventArgs e)
     {
-        int idArtista = int.Parse(cbArtista.SelectedValue);
         if (txId.Text.Equals(""))
         {
             lbMensaje.Text = "Ingrese un ID para continuar.";
