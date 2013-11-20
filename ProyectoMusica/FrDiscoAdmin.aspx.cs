@@ -34,20 +34,21 @@ public partial class FrDiscoAdmin : System.Web.UI.Page
             txNombre.Text = disco.Nombre;
             //txArtista.Text = disco.IdArtista.ToString();
             cbArtista.SelectedValue = disco.IdArtista.ToString();
+            txPrecio.Text = disco.Precio.ToString();
             lbMensaje.Text = "Dato seleccionado";
         }
         else
         {
             lbMensaje.Text = "Error. ID no válida.";
             txNombre.Text = "";
-            txArtista.Text = "";
+            //txArtista.Text = "";
         }
     }
     protected void btAgregar_Click(object sender, EventArgs e)
     {
         //Disco disco = new Disco(int.Parse(txId.Text), txNombre.Text, int.Parse(txArtista.Text));
         int idArtista = int.Parse(cbArtista.SelectedValue);
-        Disco disco = new Disco(int.Parse(txId.Text), txNombre.Text, idArtista);
+        Disco disco = new Disco(int.Parse(txId.Text), txNombre.Text, idArtista, int.Parse(txPrecio.Text));
         if (!DAODisco.sqlInsert(disco))
         {
             lbMensaje.Text = "Error. No se pudo agregar el disco";
@@ -67,7 +68,7 @@ public partial class FrDiscoAdmin : System.Web.UI.Page
     protected void btActualizar_Click(object sender, EventArgs e)
     {
         int idArtista = int.Parse(cbArtista.SelectedValue);
-        Boolean actualiza = DAODisco.sqlUpdate(new Disco(int.Parse(txId.Text), txNombre.Text, idArtista));
+        Boolean actualiza = DAODisco.sqlUpdate(new Disco(int.Parse(txId.Text), txNombre.Text, idArtista, int.Parse(txPrecio.Text)));
         lbMensaje.Text = "Dato actualizado exitosamente";
     }
 

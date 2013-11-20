@@ -41,6 +41,8 @@
                         <asp:BoundField DataField="id" HeaderText="ID" />
                         <asp:BoundField DataField="nomDisco" HeaderText="Nombre" />
                         <asp:BoundField DataField="nomArtista" HeaderText="Artista" />
+                        <asp:BoundField DataField="nomGenero" HeaderText="Genero" />
+                        <asp:BoundField DataField="precio" HeaderText="Precio" />
                     </Columns>
                 </asp:GridView>
             </td>

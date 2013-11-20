@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="FrDiscoAdmin.aspx.cs" Inherits="FrDiscoAdmin" Title="Untitled Page" %>
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="FrDiscoAdmin.aspx.cs" Inherits="FrDiscoAdmin" Title="Untitled Page" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -36,7 +36,6 @@
                 <asp:Label ID="lbArtista" runat="server" Text="Artista: "></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txArtista" runat="server"></asp:TextBox>
                 <asp:DropDownList ID="cbArtista" runat="server">
                 </asp:DropDownList>
             </td>
@@ -45,6 +44,19 @@
             </td>
             <td>
                 &nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+            
+                <asp:Label ID="lbPrecio" runat="server" Text="Precio: "></asp:Label>            
+            </td>
+            <td>
+                <asp:TextBox ID="txPrecio" runat="server"></asp:TextBox>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
         </tr>
         <tr>
             <td>
