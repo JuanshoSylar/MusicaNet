@@ -1,0 +1,10 @@
+C:\Users\Juansho\Music\BlMusica\BlMusica\BlMusica\bin\Release\BlMusica.dll
+C:\Users\Juansho\Music\BlMusica\BlMusica\BlMusica\bin\Release\BlMusica.pdb
+C:\Users\Juansho\Music\BlMusica\BlMusica\BlMusica\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Juansho\Music\BlMusica\BlMusica\BlMusica\obj\Release\BlMusica.dll
+C:\Users\Juansho\Music\BlMusica\BlMusica\BlMusica\obj\Release\BlMusica.pdb
+D:\BlMusica\BlMusica\BlMusica\bin\Release\BlMusica.dll
+D:\BlMusica\BlMusica\BlMusica\bin\Release\BlMusica.pdb
+D:\BlMusica\BlMusica\BlMusica\obj\Release\ResolveAssemblyReference.cache
+D:\BlMusica\BlMusica\BlMusica\obj\Release\BlMusica.dll
+D:\BlMusica\BlMusica\BlMusica\obj\Release\BlMusica.pdb

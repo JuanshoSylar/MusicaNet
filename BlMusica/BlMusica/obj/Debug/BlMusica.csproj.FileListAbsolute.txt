@@ -1,0 +1,5 @@
+C:\Users\Juansho\Music\BlMusica\BlMusica\BlMusica\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Juansho\Music\BlMusica\BlMusica\BlMusica\bin\Debug\BlMusica.dll
+C:\Users\Juansho\Music\BlMusica\BlMusica\BlMusica\bin\Debug\BlMusica.pdb
+C:\Users\Juansho\Music\BlMusica\BlMusica\BlMusica\obj\Debug\BlMusica.dll
+C:\Users\Juansho\Music\BlMusica\BlMusica\BlMusica\obj\Debug\BlMusica.pdb
